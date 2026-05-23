@@ -1,0 +1,58 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/*Base*/
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.gen {
+    text-align: center;
+}
+
+.monstre {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+
+}
+
+
+.corps {
+    display: none;
+    position: absolute;
+    z-index: 10;
+}
+
+.yeux {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: none;
+}
+
+.gauche{
+    position: absolute;
+    left: 0;
+}
