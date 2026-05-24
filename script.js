@@ -29,6 +29,12 @@ flecheyeuxdroite.addEventListener("click", function () {
 
 flecheyeuxgauche.addEventListener("click", function () { defiler("gauche", "yeux"); });
 
+flechebackgrounddroite.addEventListener("click", function () {
+    defiler("droite", "background");
+});
+
+flechebackgroundgauche.addEventListener("click", function () { defiler("gauche", "background"); });
+
 
 function generer() {
     let randomCouleur = Math.floor(Math.random() * couleurs.length);
@@ -46,9 +52,8 @@ function generer() {
 
 function defiler(cote, partie) {
 
-    imageCorps.style.display = "block";
 
-    if (partie == "corps") {
+   if (partie == "corps") {
         if (cote == "droite") {
             index++;
             if (index >= corps.length) {
@@ -69,7 +74,7 @@ function defiler(cote, partie) {
 
 
 
-    else if (partie == yeux) {
+     else if (partie == "yeux") {
         if (cote == "droite") {
             index++;
             if (index >= yeux.length) {
@@ -80,11 +85,33 @@ function defiler(cote, partie) {
 
         else if (cote == "gauche") {
             index--;
-            if (index <= 0) {
+            if (index < 0) {
                 index = 2;
             }
 
-        } imageYeux.src = yeux[index];
+        } 
+        imageYeux.src = yeux[index];
         imageYeux.style.display = "block";
+    }
+
+
+    
+     else if (partie == "background") {
+        if (cote == "droite") {
+            index++;
+            if (index >= couleurs.length) {
+                index = 0;
+
+            }
+        }
+
+        else if (cote == "gauche") {
+            index--;
+            if (index < 0) {
+                index = 3;
+            }
+
+        } 
+        section.style.backgroundColor = couleurs[index];
     }
 }
