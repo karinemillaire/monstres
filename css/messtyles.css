@@ -27,8 +27,8 @@ html {
 }
 
 .monstre {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
     background-color: blue;
     display: flex;
     align-items: center;
@@ -47,8 +47,8 @@ html {
 
 .yeux {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 30;
+    left: 30;
     z-index: 20;
     display: none;
 }
