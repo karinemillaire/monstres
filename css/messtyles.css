@@ -53,6 +53,12 @@ html {
     display: none;
 }
 
+.bouche{
+    position: absolute;
+    z-index: 30;
+    display: none;
+}
+
 
 
 .caroussel {
