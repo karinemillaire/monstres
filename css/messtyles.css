@@ -20,13 +20,24 @@ html {
     gap: 20px;
 }
 
+body {
+    background-image: url(../images/background.jpg);
+}
+
+h1 {
+   font-size: 00px;
+    
+}
 
 .gen {
     text-align: center;
     position: relative;
+    padding-top: 50px;
+
 }
 
 .monstre {
+   
     width: 600px;
     height: 600px;
     background-color: blue;
@@ -34,7 +45,7 @@ html {
     align-items: center;
     justify-content: center;
     position: relative;
-
+    border: 20px black solid;
 
 }
 
@@ -53,7 +64,7 @@ html {
     display: none;
 }
 
-.bouche{
+.bouche {
     position: absolute;
     z-index: 30;
     display: none;
@@ -69,19 +80,37 @@ html {
 
 
 span:hover {
-   color: aqua;
+    color: blue;
 }
 
-.gauche{
+.gauche {
     display: flex;
     flex-direction: column;
-    gap: 30px; 
+    gap: 30px;
 
 }
 
-.droite{
+.droite {
     display: flex;
     flex-direction: column;
-    gap: 30px; 
+    gap: 30px;
 
+}
+
+.button {
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 20px 40px;
+}
+
+
+.button:hover{
+    background-color:blue;
+}
+
+.material-symbols-outlined {
+    font-size: 100px !important;
 }
